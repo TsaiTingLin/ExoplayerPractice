@@ -15,6 +15,10 @@
         android:theme="@style/Theme.ExoplayerPractice"
         tools:targetApi="31">
         <activity
+            android:name=".videopage.VideosActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ExoplayerPractice.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.ExoplayerPractice.NoActionBar">

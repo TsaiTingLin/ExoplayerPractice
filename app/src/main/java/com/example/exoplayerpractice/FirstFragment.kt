@@ -11,6 +11,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.exoplayerpractice.databinding.FragmentFirstBinding
 import com.example.exoplayerpractice.databinding.FragmentTabCircleBinding
+import com.example.exoplayerpractice.videopage.VideosActivity
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import com.google.android.material.tabs.TabLayoutMediator
@@ -66,6 +67,10 @@ class FirstFragment : Fragment() {
             }
         })
         tabLayoutMediator.attach()
+        binding.videosButton.setOnClickListener {
+            val intent = VideosActivity.getIntent(requireContext())
+            startActivity(intent)
+        }
     }
 
     override fun onDestroyView() {
